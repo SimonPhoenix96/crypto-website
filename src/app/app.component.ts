@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+
+import { Component, ViewChild } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { MatSidenav } from '@angular/material/sidenav';
+import { delay } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +12,26 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'final-finance';
+  @ViewChild(MatSidenav)
+  sidenav!: MatSidenav;
+
+  constructor(private observer: BreakpointObserver) {}
+
+  ngAfterViewInit() {
+    this.observer
+      .observe(['(max-width: 800px)'])
+      .pipe(delay(1))
+      .subscribe((res) => {
+        if (res.matches) {
+          this.sidenav.mode = 'over';
+          this.sidenav.close();
+        } 
+        // keep menu closed by default, close when screen area low
+        // else {
+        //   this.sidenav.mode = 'side';
+        //   this.sidenav.open();
+        // }
+      });
+  }
 }
+
