@@ -29,7 +29,7 @@
           <mat-icon>person</mat-icon>
           <span>Profile</span>
       </button>
-      <button mat-button class="menu-button">
+      <button routerLink="/wallet" mat-button class="menu-button">
           <mat-icon>account_balance_wallet</mat-icon>
           <span>Wallet</span>
       </button>
@@ -48,7 +48,8 @@
   </mat-sidenav>
   <mat-sidenav-content>
       <div class="content mat-elevation-z8">
-          Main content here!
+        <router-outlet></router-outlet>
+          <!-- Main content here! -->
       </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
