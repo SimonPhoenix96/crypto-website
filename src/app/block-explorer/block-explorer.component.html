@@ -1,0 +1,69 @@
+TEST
+
+<!-- 
+<form >
+    <span> Example Block hash: <br><a href="https://bscscan.com/block/10272929">0x72e51794b93616598b7357af81152df0d11b646e6e1ba5efcf3a3e91f3f4f41d</a></span>
+    <br>
+    <br>
+    <label>
+        Block Hash:
+        <input type="text" [formControl]="blockhash_form">
+    </label>
+    <br>
+    </form>
+    <br>
+    <div style=" text-align: center;">
+    <button  type="submit" mat-raised-button (click)="getBlockTransactions()">Submit</button>
+    </div>
+    <br>
+    <p>
+        Block Transactions: {{ block_transactions | json }}
+    </p>
+    <br>
+    <p>
+        FFXX Related Transactions: {{ ffxx_block_transactions | json }}
+    </p> -->
+
+
+<!-- 
+
+<p>
+  <i>Select a focused chip by pressing <code>SPACE</code></i>
+</p>
+
+<mat-form-field class="example-chip-list" appearance="fill">
+  <mat-label>Block Hashes</mat-label>
+  <mat-chip-list #chipList aria-label="Block Hashes" multiple [formControl]="blockhash_form">
+    <mat-chip
+        *ngFor="let keyword of keywords"
+        [selected]="keyword"
+        [value]="keyword"
+        (removed)="removeKeyword(keyword)">
+      {{keyword}}
+    </mat-chip>
+    <input
+      placeholder="New keyword..."
+      [matChipInputFor]="chipList"
+      (matChipInputTokenEnd)="addKeywordFromInput($event)">
+  </mat-chip-list>
+</mat-form-field>
+
+<p>
+  <b>The following keywords are selected:</b> {{formControl.value}}
+</p> -->
+
+<mat-form-field class="block-explorer-form">
+    <mat-label>Block Hashes</mat-label>
+    <mat-chip-list #chipList aria-label="Block Hashes">
+      <mat-chip *ngFor="let block of blocks" [selectable]="selectable"
+               [removable]="removable" (removed)="remove(block)">
+        {{block.hash}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+      <input placeholder="New block..."
+             [matChipInputFor]="chipList"
+             [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+             [matChipInputAddOnBlur]="addOnBlur"
+             (matChipInputTokenEnd)="add($event)">
+    </mat-chip-list>
+  </mat-form-field>

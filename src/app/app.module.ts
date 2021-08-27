@@ -10,9 +10,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { WalletComponent } from './wallet/wallet.component';
+import { ReactiveFormsModule } from "@angular/forms";
+import { BlockExplorerComponent } from './block-explorer/block-explorer.component';
+import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ForumComponent } from './forum/forum.component';
+import { HelpComponent } from './help/help.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { MatChipsModule} from '@angular/material/chips';
+import {MatFormFieldModule} from '@angular/material/form-field';
+// import { FormControl} from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, WalletComponent],
+  declarations: [AppComponent, WalletComponent, BlockExplorerComponent, HomeComponent, ProfileComponent, ForumComponent, HelpComponent, NotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,8 +32,12 @@ import { WalletComponent } from './wallet/wallet.component';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
+    ReactiveFormsModule,
+    MatChipsModule,
+    MatFormFieldModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],
-})
-export class AppModule {}
+}) 
+export class AppModule {} 

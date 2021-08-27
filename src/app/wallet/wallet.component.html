@@ -1,1 +1,15 @@
-<p>wallet works!</p>
+<form >
+<label>
+    Wallet Address:
+    <input type="text" [formControl]="wallet_form">
+</label>
+<br>
+</form>
+<br>
+<div style=" text-align: center;">
+<button  type="submit" mat-raised-button (click)="getTokenBalance()">Submit</button>
+</div>
+<br>
+<p>
+    FFXX Balance: {{ token_balance }}
+</p>
