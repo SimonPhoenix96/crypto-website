@@ -19,6 +19,7 @@ import { HelpComponent } from './help/help.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MatChipsModule} from '@angular/material/chips';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatTableModule } from '@angular/material/table'  
 // import { FormControl} from '@angular/forms';
 
 @NgModule({
@@ -34,7 +35,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatDividerModule,
     ReactiveFormsModule,
     MatChipsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatTableModule
 
   ],
   providers: [],
