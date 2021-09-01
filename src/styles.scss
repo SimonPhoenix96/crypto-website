@@ -18,3 +18,8 @@ p {
     margin: 0;
 }
 html, body { height: 100%; }
+
+
+html::-webkit-scrollbar {
+    display: none;
+  }
