@@ -1,4 +1,3 @@
-TEST
 
 <!-- 
 <form >
@@ -51,19 +50,88 @@ TEST
 <p>
   <b>The following keywords are selected:</b> {{formControl.value}}
 </p> -->
+<div class="block-explorer-content mat-elevation-z8">
+  
+  
+  <div class="block-explorer-top-container">
+    
+    
+    
+      
+      <mat-form-field  appearance="none" >
+        <mat-label>Blockhashes...</mat-label>
+        <mat-chip-list #chipList aria-label="Block Hashes">
+    <mat-chip class="block-explorer-chips" *ngFor="let block of blocks" [selectable]="selectable"
+    [removable]="removable" (removed)="remove(block)" [color]="accent" [chipListSelectable]="true">
+    {{block.hash | slice:0:+10 }}... 
+    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+  </mat-chip>
+</mat-chip-list>
 
-<mat-form-field class="block-explorer-form">
-    <mat-label>Block Hashes</mat-label>
-    <mat-chip-list #chipList aria-label="Block Hashes">
-      <mat-chip *ngFor="let block of blocks" [selectable]="selectable"
-               [removable]="removable" (removed)="remove(block)">
-        {{block.hash}}
-        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-      </mat-chip>
-      <input placeholder="New block..."
-             [matChipInputFor]="chipList"
-             [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-             [matChipInputAddOnBlur]="addOnBlur"
-             (matChipInputTokenEnd)="add($event)">
-    </mat-chip-list>
-  </mat-form-field>
+</mat-form-field>
+
+</div>
+
+<div class="block-explorer-middle-container ">
+<input aria-label="Block Hashes" class="block-explorer-input" placeholder="Type in additional blockhashes here..."
+[matChipInputFor]="chipList"
+[matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+[matChipInputAddOnBlur]="addOnBlur"
+(matChipInputTokenEnd)="add($event)">
+</div>
+
+<div class="block-explorer-bottom-container">
+  <br>
+    <div style=" text-align: center;">
+    <button  type="submit" mat-raised-button (click)="getBlockTransactions()">Submit</button>
+    </div>
+    <br>
+
+    <table mat-table  appearance="none"  [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+    
+      <!-- Position Column -->
+      <ng-container matColumnDef="hash">
+        <th mat-header-cell *matHeaderCellDef> hash </th>
+        <td mat-cell *matCellDef="let element"> {{element.hash | slice:0:+10 }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="block_number">
+        <th mat-header-cell *matHeaderCellDef> block number </th>
+        <td mat-cell *matCellDef="let element"> {{element.block_number}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="validator">
+        <th mat-header-cell *matHeaderCellDef> validator </th>
+        <td mat-cell *matCellDef="let element"> {{element.validator}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="number_transactions">
+        <th mat-header-cell *matHeaderCellDef> number_transactions </th>
+        <td mat-cell *matCellDef="let element"> {{element.number_transactions}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="time">
+        <th mat-header-cell *matHeaderCellDef> time </th>
+        <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+    <!-- <li *ngFor="let transaction of block_transactions">
+    <p>
+        Block Transactions: {{ transaction.hash | json }}
+    </p>
+    <br>
+    <p>
+        FFXX Related Transactions: {{ ffxx_block_transactions | json }}
+    </p> 
+  </li> -->
+</div>
+
+</div>
