@@ -36,12 +36,11 @@ export class BlockExplorerComponent implements OnInit {
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
   
   
-  blocks: Block[]  = [
-    // {hash: '0x4ea35eaf2fc60c6fa22a510578b739c752d6b9637845a6c560b13c997e0d2055', block_number: 0},
-    // {hash: '0x72e51794b93616598b7357af81152df0d11b646e6e1ba5efcf3a3e91f3f4f41d', block_number: 0},
-    {block_number: 0, hash: '0xe5e9f8e12d28b06b0e589ae0e6f8ee5c15ca77021e195893be96be1c064fcada',  validator: '', number_transactions: 0, time: 0},
+  chip_list_blocks: Block[]= [
+    {block_number: 0, hash: '0x4ea35eaf2fc60c6fa22a510578b739c752d6b9637845a6c560b13c997e0d2055',  validator: '', number_transactions: 0, time: ''},
+    {block_number: 0, hash: '0x72e51794b93616598b7357af81152df0d11b646e6e1ba5efcf3a3e91f3f4f41d',  validator: '', number_transactions: 0, time: ''},
+    {block_number: 0, hash: '0xe5e9f8e12d28b06b0e589ae0e6f8ee5c15ca77021e195893be96be1c064fcada',  validator: '', number_transactions: 0, time: ''},
   ];
-  dataSource: MatTableDataSource < any > ;
   
   // new_block: Block[]  = [];
 
@@ -55,7 +54,7 @@ export class BlockExplorerComponent implements OnInit {
 
     // adding hashes
     if ((value || '').trim()) {
-      this.blocks.push({ block_number: 0, hash: value.trim(), validator: '', number_transactions: 0, time: 0});
+      this.chip_list_blocks.push({ block_number: 0, hash: value.trim(), validator: '', number_transactions: 0, time: ''});
     }
 
     // Reset the input value
@@ -65,10 +64,10 @@ export class BlockExplorerComponent implements OnInit {
   }
 
   remove(block: Block): void {
-    const index = this.blocks.indexOf(block);
+    const index = this.chip_list_blocks.indexOf(block);
 
     if (index >= 0) {
-      this.blocks.splice(index, 1);
+      this.chip_list_blocks.splice(index, 1);
     }
   }
 
@@ -84,41 +83,38 @@ export class BlockExplorerComponent implements OnInit {
 
 
   // live block explorer stuff
-  recent_blocks: Block[] = [];
+  recent_blocks: Block[];
   eta_next_block: number;
+  dataSource: MatTableDataSource < any > ;
 
   constructor(private EthersService: EthersService) { }
 
   ngOnInit(): void {
-
-
-    //TEMP live block explorer
-    this.EthersService.getEstimatedBlockCountdown().subscribe(value => {
-
-     
-      this.eta_next_block = this.eta_next_block + value 
-        
-      })
-      
-      
-      
-      this.EthersService.getRecentBlocks().subscribe(value => {
-        // console.log("recent blocks: " + this.recent_blocks[0]['block_number'])
-        console.log("waiting for next block...")
-        this.recent_blocks = value
-        // console.log("block-explorer -- getRecentBlocks.subscribe() value = " + value)
-  
-  
-    })
-
-
-    this.dataSource = new MatTableDataSource(this.recent_blocks)
-
-
-
     // manual block search
-    // this.dataSource = new MatTableDataSource(this.blocks)
-
+    this.dataSource = new MatTableDataSource(this.recent_blocks)
+    // this.dataSource = new MatTableDataSource(this.chip_list_blocks)
+    
+    //live block explorer
+    this.EthersService.getEstimatedBlockCountdown().subscribe(value => {
+      console.log("block-explorer -- ETA_next_block = " + value)
+      this.eta_next_block = this.eta_next_block + value 
+    })
+    
+    
+    
+    this.EthersService.getRecentBlocks().subscribe(value => {
+      // console.log("recent blocks: " + this.recent_blocks[0]['block_number'])
+      // console.log("block-explorer -- getRecentBlocks.subscribe() value = " + JSON.stringify(value))
+      console.log("waiting for next block...")
+      // if (value != undefined){ 
+        this.recent_blocks = value
+        this.dataSource.data = this.recent_blocks
+        console.log("block-explorer -- getRecentBlocks.subscribe() this.recent_blocks = " + JSON.stringify(this.recent_blocks))
+        // }
+      })
+      // END live block explorer
+      
+ 
   }
 
 
@@ -126,7 +122,7 @@ export class BlockExplorerComponent implements OnInit {
   getBlockTransactions(){
 
     
-    const local_blocks = this.blocks
+    const local_blocks = this.chip_list_blocks
     for (let index = 0; index < local_blocks.length; index++) {
       
       
@@ -138,7 +134,7 @@ export class BlockExplorerComponent implements OnInit {
         // let found = false;
 
 
-        //  this.blocks.forEach(block => {
+        //  this.chip_list_blocks.forEach(block => {
       for (let index = 0; index < local_blocks.length; index++) {  
             let block = local_blocks[index];
             // console.log("looking for block hash, to fill in rest of block info ", block.hash )
@@ -148,7 +144,11 @@ export class BlockExplorerComponent implements OnInit {
               local_blocks[local_blocks.indexOf(block)].block_number  = block_transactions.number 
               local_blocks[local_blocks.indexOf(block)].validator  = block_transactions.miner 
               local_blocks[local_blocks.indexOf(block)].number_transactions  = block_transactions.transactions.length
-              local_blocks[local_blocks.indexOf(block)].time  = block_transactions.timestamp 
+              
+              let human_readable_timestamp = new Date(block_transactions.timestamp) ;
+              let timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
+              var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+              local_blocks[local_blocks.indexOf(block)].time  = human_readable_timestamp.getHours() + ":" + human_readable_timestamp.getMinutes() + ":" + human_readable_timestamp.getSeconds() + " " + days[human_readable_timestamp.getDay()]  + "/" + human_readable_timestamp.getDate() + "/" + human_readable_timestamp.getDay() + "/" + human_readable_timestamp.getFullYear()
               // found = true;
               break
                  
@@ -157,9 +157,9 @@ export class BlockExplorerComponent implements OnInit {
           }
 
 
-          this.blocks = local_blocks
+          this.chip_list_blocks = local_blocks
           this.dataSource.data = local_blocks
-          console.log("local blocks array: ", this.blocks)
+          console.log("local chip_list_blocks array: ", this.chip_list_blocks)
           // });
 
         // this.block_transactions.forEach(transaction => {
@@ -169,7 +169,7 @@ export class BlockExplorerComponent implements OnInit {
         //     console.log("looking for block hash ", block.hash )
         //     if (block.hash == transaction.hash) {
         //       console.log("block found getting blockr " , transaction.number)
-        //       this.blocks[this.blocks.indexOf(block)].block_number  = transaction.number 
+        //       this.blocks[this.chip_list_blocks.indexOf(block)].block_number  = transaction.number 
               
         //     }
             

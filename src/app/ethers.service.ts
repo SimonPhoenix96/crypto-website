@@ -11,6 +11,7 @@ import {
   Subject,
   of,
   BehaviorSubject,
+  from
 } from "rxjs";
 import { switchMap, tap, share, retry, takeUntil } from "rxjs/operators";
 import { ObserversModule } from "@angular/cdk/observers";
@@ -26,7 +27,8 @@ import { throwToolbarMixedModesError } from "@angular/material/toolbar";
 const abi_ffxx = require("src/assets/abi/abi-final-finance.json");
 
 // Binance Smart Chain provider url
-const RPC_ENDPOINT = "https://data-seed-prebsc-1-s1.binance.org:8545/";
+// test net https://data-seed-prebsc-1-s1.binance.org:8545/
+const RPC_ENDPOINT = "https://bsc-dataseed.binance.org/";
 var provider = new ethers.providers.JsonRpcProvider(RPC_ENDPOINT);
 
 //currently my wallet address
@@ -50,7 +52,7 @@ var contract = new ethers.Contract(contract_address, abi_ffxx, provider);
 export class EthersService {
   // live block explorer stuff
   private recent_blocks$: Observable<any>;
-  private recent_blocks: Block[] = [{ block_number: 0, hash: '', validator: '', number_transactions: 0, time: 0}];
+  private recent_blocks: Block[] = [];
   // private harmonized_local_recent_block: Block;
   private recent_block;
   private recent_block_number;
@@ -118,7 +120,7 @@ export class EthersService {
     // console.log("eta next block: " + (this.recent_block['timestamp'] - this.recent_block_n1['timestamp']) )
 
     this.eta_next_block = this.recent_block['timestamp'] - this.recent_block_n1['timestamp']
-    return this.recent_block["timestamp"] - this.recent_block_n1["timestamp"];
+    return this.eta_next_block;
   }
 
   getEstimatedBlockCountdown(): Observable<number> {
@@ -127,12 +129,12 @@ export class EthersService {
 
   async setRecentBlocks(): Promise<Block[]> {
     // turn off logging
-    //console.log = function() {}
+    // console.log = function() {}
 
     if(!this.currently_running){
       this.toggle_currently_running()
       // console.log("ethers.service -- entered setRecentBlocks() this.eta_next_block * 1000 = " + this.eta_next_block * 1000)
-      // console.log("ethers.service -- delay() = " + this.eta_next_block * 1000)
+      console.log("ethers.service -- delay(this.eta_next_block) = " + this.eta_next_block * 1000)
       let delay = await this.delay(this.eta_next_block * 1000);
       
       
@@ -146,18 +148,21 @@ export class EthersService {
       let local_number_transactions = 0;
       let local_time = local_recent_block["timestamp"];
 
+      var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      let human_readable_timestamp_unformatted = new Date(local_time) ;
+      let human_readable_timestamp =  human_readable_timestamp_unformatted.getHours() + ":" + human_readable_timestamp_unformatted.getMinutes() + ":" + human_readable_timestamp_unformatted.getSeconds() + " " + days[human_readable_timestamp_unformatted.getDay()]  + "/" + human_readable_timestamp_unformatted.getDate() + "/" + human_readable_timestamp_unformatted.getDay() + "/" + human_readable_timestamp_unformatted.getFullYear()
+
       // harmonized local_recent_block
       let harmonized_local_recent_block = {
         block_number: local_block_number,
         hash: local_hash,
         validator: local_validator,
         number_transactions: local_number_transactions,
-        time: local_time,
+        time: human_readable_timestamp,
       };
-      // console.log(harmonized_local_recent_block)
-      // console.log("harmonized_local_recent_block: " + harmonized_local_recent_block.hash);
+      console.log("harmonized_local_recent_block: " + JSON.stringify(harmonized_local_recent_block));
 
-      let inserted = false;
+      let found = false;
       let counter = 0;
       // console.log("enter while loop: " + !inserted);
       //!inserted
@@ -167,33 +172,38 @@ export class EthersService {
 
 
       while (counter < this.recent_blocks.length) {
-        // console.log("entered while loop COUNTER = " + counter);
+        console.log("entered while loop COUNTER = " + counter);
         // console.log("HASH: " + harmonized_local_recent_block.hash);
 
 
         // console.log("this.recent_blocks[" + counter + "].hash = " + this.recent_blocks[counter].hash)
         // console.log("this.recent_blocks[counter].hash == harmonized_local_recent_block.hash = " + this.recent_blocks[counter].hash == harmonized_local_recent_block.hash)
         if (this.recent_blocks[counter].hash == harmonized_local_recent_block.hash) {
-          // console.log("hash already in recent_blocks, breaking loop!")
+          console.log("hash already in recent_blocks, breaking loop!")
+          found = true
           break
         }
         counter++;
         
-        // console.log("redo while loop");
+          // console.log("redo while loop");
       }
       // console.log("exited while loop");
-      
-      this.recent_blocks.push(harmonized_local_recent_block);
-      
+
+      if(!found){
+        console.log("hash not found adding to this.recent_blocks!")
+        this.recent_blocks.push(harmonized_local_recent_block);
+      }
       // console.log("ethers.service setrecentblocks() this.recent_blocks.length = " + this.recent_blocks.length)
       // try a wait function here which waits for eta_next_block
       
+      console.log("ethers.service -- this.recent_blocks().length = " + this.recent_blocks.length )
+      
+      
       this.toggle_currently_running()
-      console.log("ethers.service -- this.recent_blocks() = " + this.recent_blocks[this.recent_blocks.length -1].block_number)
-      return this.recent_blocks;
     }
-
     
+    
+    return this.recent_blocks;
 
   }
 
@@ -209,7 +219,7 @@ export class EthersService {
 
 
 
-  getRecentBlocks(): Observable<any> {
+  getRecentBlocks(): Observable<Block[]> {
     return this.recent_blocks$;
   }
 

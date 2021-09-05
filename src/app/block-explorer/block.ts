@@ -3,5 +3,5 @@ export interface Block {
     block_number: number;
     validator: string;
     number_transactions: number;
-    time: number;
+    time: string;
   }

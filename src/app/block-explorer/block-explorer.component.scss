@@ -57,6 +57,25 @@ mat-label{
 
 }
 
+// mat-table 
+td, th {
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+.mat-cell {
+  color: white;
+}
+.mat-header-cell{
+  color: white;
+}
+
+table{
+  background: #1e1c1c;
+  width: 100%;
+  text-align: center !important;
+  vertical-align: middle !important;  
+}
 
 .block-explorer-input{
   // border: 2px solid rgb(2, 77, 90);
@@ -142,4 +161,6 @@ mat-label{
 .block-explorer-chips{
   color: rgb(2, 77, 90);
   width: fit-content;
+  justify-content: center;
+  
 }

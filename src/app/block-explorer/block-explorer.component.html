@@ -1,55 +1,3 @@
-
-<!-- 
-<form >
-    <span> Example Block hash: <br><a href="https://bscscan.com/block/10272929">0x72e51794b93616598b7357af81152df0d11b646e6e1ba5efcf3a3e91f3f4f41d</a></span>
-    <br>
-    <br>
-    <label>
-        Block Hash:
-        <input type="text" [formControl]="blockhash_form">
-    </label>
-    <br>
-    </form>
-    <br>
-    <div style=" text-align: center;">
-    <button  type="submit" mat-raised-button (click)="getBlockTransactions()">Submit</button>
-    </div>
-    <br>
-    <p>
-        Block Transactions: {{ block_transactions | json }}
-    </p>
-    <br>
-    <p>
-        FFXX Related Transactions: {{ ffxx_block_transactions | json }}
-    </p> -->
-
-
-<!-- 
-
-<p>
-  <i>Select a focused chip by pressing <code>SPACE</code></i>
-</p>
-
-<mat-form-field class="example-chip-list" appearance="fill">
-  <mat-label>Block Hashes</mat-label>
-  <mat-chip-list #chipList aria-label="Block Hashes" multiple [formControl]="blockhash_form">
-    <mat-chip
-        *ngFor="let keyword of keywords"
-        [selected]="keyword"
-        [value]="keyword"
-        (removed)="removeKeyword(keyword)">
-      {{keyword}}
-    </mat-chip>
-    <input
-      placeholder="New keyword..."
-      [matChipInputFor]="chipList"
-      (matChipInputTokenEnd)="addKeywordFromInput($event)">
-  </mat-chip-list>
-</mat-form-field>
-
-<p>
-  <b>The following keywords are selected:</b> {{formControl.value}}
-</p> -->
 <div class="block-explorer-content mat-elevation-z8">
   
   
@@ -61,7 +9,7 @@
       <mat-form-field  appearance="none" >
         <mat-label>Blockhashes...</mat-label>
         <mat-chip-list #chipList aria-label="Block Hashes">
-    <mat-chip class="block-explorer-chips" *ngFor="let block of blocks" [selectable]="selectable"
+    <mat-chip class="block-explorer-chips" *ngFor="let block of chip_list_blocks" [selectable]="selectable"
     [removable]="removable" (removed)="remove(block)" [color]="accent" [chipListSelectable]="true">
     {{block.hash | slice:0:+10 }}... 
     <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
@@ -87,34 +35,36 @@
     </div>
     <br>
 
-    <table mat-table  appearance="none"  [dataSource]="dataSource" class="mat-elevation-z8">
+    <table mat-table  appearance="none"  [dataSource]="dataSource" class="mat-elevation-z8" >
 
       <!--- Note that these columns can be defined in any order.
             The actual rendered columns are set as a property on the row definition" -->
     
       <!-- Position Column -->
-      <ng-container matColumnDef="hash">
-        <th mat-header-cell *matHeaderCellDef> hash </th>
-        <td mat-cell *matCellDef="let element"> {{element.hash | slice:0:+10 }} </td>
+      <ng-container  matColumnDef="hash">
+        <th mat-header-cell *matHeaderCellDef> Hash </th>
+        <td  (mouseover)="changeText=true" (mouseout)="changeText=false" mat-cell *matCellDef="let element">{{element.hash | slice:0:+10 }}</td>
       </ng-container>
 
       <ng-container matColumnDef="block_number">
-        <th mat-header-cell *matHeaderCellDef> block number </th>
-        <td mat-cell *matCellDef="let element"> {{element.block_number}} </td>
+        <th mat-header-cell *matHeaderCellDef> Block </th>
+        <td (mouseover)="changeText=true" (mouseout)="changeText=false"  mat-cell *matCellDef="let element"> <span *ngIf="!changeText">{{element.block_number}}</span>
+          <span style="color: rgb(52, 35, 169);" *ngIf="changeText">https://bscscan.com/block/{{element.block_number}}</span>
+        </td>
       </ng-container>
 
       <ng-container matColumnDef="validator">
-        <th mat-header-cell *matHeaderCellDef> validator </th>
+        <th mat-header-cell *matHeaderCellDef> Witness </th>
         <td mat-cell *matCellDef="let element"> {{element.validator}} </td>
       </ng-container>
 
       <ng-container matColumnDef="number_transactions">
-        <th mat-header-cell *matHeaderCellDef> number_transactions </th>
+        <th mat-header-cell *matHeaderCellDef> Nr. TX </th>
         <td mat-cell *matCellDef="let element"> {{element.number_transactions}} </td>
       </ng-container>
 
       <ng-container matColumnDef="time">
-        <th mat-header-cell *matHeaderCellDef> time </th>
+        <th mat-header-cell *matHeaderCellDef> Time </th>
         <td mat-cell *matCellDef="let element"> {{element.time}} </td>
       </ng-container>
     
