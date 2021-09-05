@@ -7,21 +7,15 @@ import {MatChipInputEvent,MatChipsModule,} from '@angular/material/chips';
 import { BlockWithTransactions } from '@ethersproject/abstract-provider';
 import { BigNumber, Transaction } from 'ethers';
 import {  MatTableDataSource } from '@angular/material/table';
-
-
+import { Observable, timer, Subscription, Subject,interval } from 'rxjs';
+import {Block } from './block'
 
 // const ELEMENT_DATA: Block[] = [
 //   {hash: '0x4ea35eaf2fc60c6fa22a510578b739c752d6b9637845a6c560b13c997e0d2055', block_number: 0},
 //   {hash: '0x72e51794b93616598b7357af81152df0d11b646e6e1ba5efcf3a3e91f3f4f41d', block_number: 0},
 // ];
 
-export interface Block {
-  hash: string;
-  block_number: number;
-  validator: string;
-  number_transactions: number;
-  time: number;
-}
+
 
 
 @Component({
@@ -50,6 +44,10 @@ export class BlockExplorerComponent implements OnInit {
   dataSource: MatTableDataSource < any > ;
   
   // new_block: Block[]  = [];
+
+
+  // live block explorer stuff
+
 
   add(event: MatChipInputEvent): void {
     const input = event.input;
@@ -85,18 +83,40 @@ export class BlockExplorerComponent implements OnInit {
   // formControl = new FormControl(['angular']);
 
 
-
+  // live block explorer stuff
+  recent_blocks: Block[] = [];
+  eta_next_block: number;
 
   constructor(private EthersService: EthersService) { }
 
   ngOnInit(): void {
-    this.dataSource = new MatTableDataSource(this.blocks)
 
-    // this.blocks.subscribe(form_value => {
 
-    //   this.block_number = form_value
+    //TEMP live block explorer
+    this.EthersService.getEstimatedBlockCountdown().subscribe(value => {
+
+     
+      this.eta_next_block = this.eta_next_block + value 
+        
+      })
+      
+      
+      
+      this.EthersService.getRecentBlocks().subscribe(value => {
+        // console.log("recent blocks: " + this.recent_blocks[0]['block_number'])
+        console.log("block-explorer -- getRecentBlocks.subscribe() value = " + value)
+        this.recent_blocks = value
   
-    //   })  
+  
+    })
+
+
+    this.dataSource = new MatTableDataSource(this.recent_blocks)
+
+
+
+    // manual block search
+    // this.dataSource = new MatTableDataSource(this.blocks)
 
   }
 
@@ -138,7 +158,7 @@ export class BlockExplorerComponent implements OnInit {
 
           this.blocks = local_blocks
           this.dataSource.data = local_blocks
-        console.log("local blocks array: ", this.blocks)
+          console.log("local blocks array: ", this.blocks)
           // });
 
         // this.block_transactions.forEach(transaction => {
