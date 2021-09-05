@@ -104,8 +104,9 @@ export class BlockExplorerComponent implements OnInit {
       
       this.EthersService.getRecentBlocks().subscribe(value => {
         // console.log("recent blocks: " + this.recent_blocks[0]['block_number'])
-        console.log("block-explorer -- getRecentBlocks.subscribe() value = " + value)
+        console.log("waiting for next block...")
         this.recent_blocks = value
+        // console.log("block-explorer -- getRecentBlocks.subscribe() value = " + value)
   
   
     })
