@@ -1,4 +1,4 @@
-<mat-toolbar class="mat-elevation-z8">
+<mat-toolbar class="transparent">
   
   <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
       <mat-icon *ngIf="!sidenav.opened">
@@ -9,11 +9,27 @@
       </mat-icon>
   </button>
 
-  <span class="menu"> <img class="menu-logo" src="./assets/img/deffi.png" />             Final Finance : Silver Chipcoin</span>
+  <span class="menu">Final Finance <img class="menu-logo" src="./assets/img/deffi.png" />Silver Chipcoin</span>
+  
+  <!-- <button style="background-color: rgb(53, 53, 138);" class="navbar-wallet-button" mat-raised-button color="primary" (click)="connectToMetaMask()">Wallet Connection{{metamask_accounts$ | async}}</button> -->
+
+
+ 
+    <div class="navbar-wallet-button" *ngIf="metamask_connected | async; else elseBlock">
+      <!-- Content to render when condition is true.  -->
+      <button  style="background-color: rgb(70, 138, 53);"  mat-raised-button color="primary">Wallet Connected</button>
+    </div>
+    <ng-template #elseBlock >
+      <!-- Content to render when condition is false.  -->
+      <div class="navbar-wallet-button">
+        <button style="background-color: rgb(53, 53, 138);"  mat-raised-button color="primary" (click)="connectToMetaMask()">Wallet Disconnected</button>
+      </div>
+    </ng-template>
+
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+  <mat-sidenav #sidenav="matSidenav" >
 
       
 
@@ -33,6 +49,10 @@
           <mat-icon>account_balance_wallet</mat-icon>
           <span>Wallet</span>
       </button>
+      <button routerLink="/nft-gallery" mat-button class="menu-button">
+        <mat-icon>view_module</mat-icon>
+        <span>NFT Gallery</span>
+    </button>
       <button routerLink="/block-explorer" mat-button class="menu-button">
         <mat-icon>search</mat-icon>
         <span>Block Explorer</span>

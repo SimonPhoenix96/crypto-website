@@ -19,13 +19,20 @@ import { HelpComponent } from './help/help.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MatChipsModule} from '@angular/material/chips';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { MatTableModule } from '@angular/material/table'  
+import { MatTableModule } from '@angular/material/table';
+import { NftGalleryComponent } from './nft-gallery/nft-gallery.component' 
+import {MatGridListModule} from '@angular/material/grid-list';
+
+import { HttpClientModule } from '@angular/common/http';
+
 // import { FormControl} from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, WalletComponent, BlockExplorerComponent, HomeComponent, ProfileComponent, ForumComponent, HelpComponent, NotFoundComponent],
+  declarations: [AppComponent, WalletComponent, BlockExplorerComponent, HomeComponent, ProfileComponent, ForumComponent, HelpComponent, NotFoundComponent, NftGalleryComponent],
   imports: [
     BrowserModule,
+    // import HttpClientModule after BrowserModule.
+    HttpClientModule,    
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -36,7 +43,8 @@ import { MatTableModule } from '@angular/material/table'
     ReactiveFormsModule,
     MatChipsModule,
     MatFormFieldModule,
-    MatTableModule
+    MatTableModule,
+    MatGridListModule
 
   ],
   providers: [],

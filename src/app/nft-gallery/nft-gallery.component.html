@@ -1,0 +1,20 @@
+
+  
+
+
+
+
+    <div class="nft-gallery-top-container">
+      <mat-grid-list rowHeight="2:1" cols="4" gutterSize="15px" >
+        <mat-grid-tile width="100px" height="100px"
+            *ngFor="let nft_asset of  nft_collection_assets"
+            [style.background]="grey">
+    
+          <img src= {{nft_asset.image_url}} >
+    
+          <mat-grid-tile-footer> {{nft_asset.name}} </mat-grid-tile-footer>
+          </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  
+

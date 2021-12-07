@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import { EthersService } from '../ethers.service';
@@ -25,7 +25,7 @@ import {Block } from './block'
 })
 
 
-export class BlockExplorerComponent implements OnInit {
+export class BlockExplorerComponent implements OnInit, OnDestroy {
   displayedColumns: string[] = ['block_number', 'hash',  'validator', 'number_transactions', 'time'];
   
   
@@ -83,26 +83,31 @@ export class BlockExplorerComponent implements OnInit {
 
 
   // live block explorer stuff
-  recent_blocks: Block[];
+
+
+  recent_blocks: Block[] = [];
+  recent_blocks$: Subscription;
+
   eta_next_block: number;
+  eta_next_block$: Subscription;
+  
   dataSource: MatTableDataSource < any > ;
 
   constructor(private EthersService: EthersService) { }
 
   ngOnInit(): void {
+
+
     // manual block search
     this.dataSource = new MatTableDataSource(this.recent_blocks)
-    // this.dataSource = new MatTableDataSource(this.chip_list_blocks)
     
     //live block explorer
-    this.EthersService.getEstimatedBlockCountdown().subscribe(value => {
+    this.eta_next_block$ =  this.EthersService.getEstimatedBlockCountdown().subscribe(value => {
       console.log("block-explorer -- ETA_next_block = " + value)
       this.eta_next_block = this.eta_next_block + value 
     })
     
-    
-    
-    this.EthersService.getRecentBlocks().subscribe(value => {
+    this.recent_blocks$ = this.EthersService.getRecentBlocks().subscribe(value => {
       // console.log("recent blocks: " + this.recent_blocks[0]['block_number'])
       // console.log("block-explorer -- getRecentBlocks.subscribe() value = " + JSON.stringify(value))
       console.log("waiting for next block...")
@@ -116,6 +121,13 @@ export class BlockExplorerComponent implements OnInit {
       
  
   }
+
+  ngOnDestroy()
+{
+  this.recent_blocks$.unsubscribe();
+  this.eta_next_block$.unsubscribe();
+
+}
 
 
   // TODO: if error remove hash from list

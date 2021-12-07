@@ -1,4 +1,4 @@
-<div class="block-explorer-content mat-elevation-z8">
+<div class="block-explorer-content">
   
   
   <div class="block-explorer-top-container">
@@ -48,8 +48,7 @@
 
       <ng-container matColumnDef="block_number">
         <th mat-header-cell *matHeaderCellDef> Block </th>
-        <td (mouseover)="changeText=true" (mouseout)="changeText=false"  mat-cell *matCellDef="let element"> <span *ngIf="!changeText">{{element.block_number}}</span>
-          <span style="color: rgb(52, 35, 169);" *ngIf="changeText">https://bscscan.com/block/{{element.block_number}}</span>
+        <td (mouseover)="changeText=true" (mouseout)="changeText=false"  mat-cell *matCellDef="let element">{{element.block_number}}
         </td>
       </ng-container>
 

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { EthersService } from './ethers.service';
+import { HttpService } from './http.service';
 
-describe('EthersService', () => {
-  let service: EthersService;
+describe('HttpService', () => {
+  let service: HttpService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(EthersService);
+    service = TestBed.inject(HttpService);
   });
 
   it('should be created', () => {

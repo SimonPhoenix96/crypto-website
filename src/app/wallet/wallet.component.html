@@ -1,15 +1,35 @@
-<form >
-<label>
-    Wallet Address:
-    <input type="text" [formControl]="wallet_form">
-</label>
-<br>
-</form>
-<br>
-<div style=" text-align: center;">
-<button  type="submit" mat-raised-button (click)="getTokenBalance()">Submit</button>
-</div>
-<br>
-<p>
-    FFXX Balance: {{ token_balance }}
-</p>
+
+
+<div class="wallet-content">
+  
+  
+    <div class="wallet-top-container">
+        <form >
+            <label>
+                Wallet Address:
+                <input type="text" [formControl]="wallet_form">
+            </label>
+            <br>
+            </form>
+            <br>
+            <div>
+            <button  type="submit" mat-raised-button (click)="getTokenBalance()">Submit</button>
+            </div>
+            <br>
+            <p>
+                FFXX Balance: {{ token_balance }}
+            </p>
+
+  </div>
+  
+  <!-- <div class="wallet-middle-container ">
+
+  </div> -->
+  
+  <div class="wallet-bottom-container">
+    Connected Wallet: x
+    <br>
+    Eth Balance: x
+  </div> 
+  
+  </div>

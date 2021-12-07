@@ -1,36 +1,47 @@
 mat-toolbar {
     color: white;
-    background-color: #1d1c1c;
-    
+    background-color: #1c1c1c;
+    position: relative;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.741);
+    z-index: 2;
 }
+
+
 
 mat-sidenav {
     margin: 16px;
     width: 200px;
-    border-right: none;
-    background: #002b5c;
     color: white;
+    border-color: white;
     border-radius: 10px;
     padding: 16px;
     text-align: center;
-    background-color: #1d1c1c; 
+    background-color: #1c1c1c;
+    height: fit-content
 
     
 }
 
 mat-sidenav-container {
     height: calc(100vh - 65px);
-    background-color: #000000; 
+    background-color: #1c1c1cd2; 
 
 }
 
 mat-divider {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(102, 102, 102);
 }
 
+.navbar-wallet-button {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    // justify-content: flex-start;
+    font-size: 1rem;
 
+}
 
 .menu-button {
     width: 100%;
@@ -42,6 +53,10 @@ mat-divider {
     mat-icon {
         margin-right: 8px;
     }
+}
+
+button:hover {
+background-color: rgba(255, 255, 255, 0.111)
 }
 
 .menu-logo {
@@ -60,6 +75,8 @@ mat-divider {
     text-align: center;
 
 }
+
+
 
 
 

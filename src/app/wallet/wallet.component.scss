@@ -1,0 +1,43 @@
+
+
+.wallet-content {
+    height: fit-content;
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+    // display: block;
+    // justify-content: center;
+    // align-items: center;
+    
+    font-size: 2rem;
+    background-color: #1c1c1c; 
+    color: #fff;
+    position: relative;
+    text-align: center;
+    
+    // border: 7px solid rgb(239, 205, 112);
+    
+    // object-fit: cover;
+    // width: 100%;
+    // height: 100%;
+    
+    }
+    
+    .wallet-top-container {
+        width: 100%;
+        height: 40%;
+        position: relative;
+        // border: 7px solid rgb(239, 116, 112);
+        top: 0;
+    
+    }
+
+    .wallet-bottom-container {
+        width: 100%;
+        height: 60%;
+        position: relative;
+        // border: 7px solid rgb(133, 239, 112);
+        bottom: 0;
+    
+    }
+    
