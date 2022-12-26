@@ -22,7 +22,7 @@ export class HttpService {
   httpHeader = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      'X-API-KEY': 'a788eea40aaf46a48a8502bdeba5b131'
+      'X-API-KEY': 'API_KEY'
     })
   }  
 
