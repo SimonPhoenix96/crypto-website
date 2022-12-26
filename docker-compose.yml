@@ -1,11 +1,11 @@
 version: "3.9"
 services:
-  final-finance:
+  crypto-website:
     build:
       context: .
       dockerfile: Dockerfile
     container_name: navidrome
-    image: simonphoenix96/final-finance:latest
+    image: simonphoenix96/crypto-website:latest
     user: 1000:1000 # should be owner of volumes
 #    ports:
 #      - "999:999"
@@ -17,9 +17,9 @@ services:
       - "traefik.enable=true"
       - "traefik.docker.network=web"
       - "traefik.basic.port=999"
-      - "traefik.basic.frontend.rule=Host:final-finance.3rdimpact.world"
+      - "traefik.basic.frontend.rule=Host:crypto-website.3rdimpact.world"
       - "traefik.basic.protocol=http"
-      - "traefik.frontend.auth.basic=final-finance:$$apr1$$mKnit3Bo$$XBIr1PxupwBJocLLy7L3v/"
+      - "traefik.frontend.auth.basic=crypto-website:$$apr1$$mKnit3Bo$$XBIr1PxupwBJocLLy7L3v/"
 EY7AAIsu"
       - "traefik.frontend.headers.SSLRedirect=true"
     expose:

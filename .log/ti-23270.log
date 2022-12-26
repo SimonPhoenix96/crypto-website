@@ -1,0 +1,20 @@
+[10:24:40.718] Global cache location '/home/jd/.cache/typescript/4.5', safe file path '/usr/lib/node_modules/typescript/lib/typingSafeList.json', types map path /usr/lib/node_modules/typescript/lib/typesMap.json
+[10:24:40.718] Processing cache location '/home/jd/.cache/typescript/4.5'
+[10:24:40.719] Trying to find '/home/jd/.cache/typescript/4.5/package.json'...
+[10:24:40.719] Loaded content of '/home/jd/.cache/typescript/4.5/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.580"}}
+[10:24:40.719] Loaded content of '/home/jd/.cache/typescript/4.5/package-lock.json'
+[10:24:40.719] Finished processing cache location '/home/jd/.cache/typescript/4.5'
+[10:24:40.719] Process id: 23298
+[10:24:40.719] NPM location: /usr/bin/npm (explicit '--npmLocation' not  provided)
+[10:24:40.719] validateDefaultNpmLocation: false
+[10:24:40.719] Npm config file: /home/jd/.cache/typescript/4.5/package.json
+[10:24:40.719] Updating types-registry npm package...
+[10:24:40.719] Exec: /usr/bin/npm install --ignore-scripts types-registry@latest
+[10:24:41.384]     Succeeded. stdout:
+    
+    up to date, audited 2 packages in 579ms
+
+found 0 vulnerabilities
+
+[10:24:41.384] Updated types-registry npm package
+[10:48:52.886] Parent process has exited, shutting down...

@@ -1,20 +1,26 @@
-
-  
-
-
-
-
-    <div class="nft-gallery-top-container">
-      <mat-grid-list rowHeight="2:1" cols="4" gutterSize="15px" >
-        <mat-grid-tile width="100px" height="100px"
+<div class="nft-gallery-content">
+<div class="nft-gallery-top-container">
+</div>
+    <div class="nft-gallery-middle-container">
+      <mat-grid-list rowHeight="1:1" cols="4" gutterSize="22px" >
+        
+        <mat-grid-tile mat-button (click)="openNftAssetTileDialog(nft_asset.description, nft_asset.image_url, nft_asset.name)"
             *ngFor="let nft_asset of  nft_collection_assets"
-            [style.background]="grey">
-    
-          <img src= {{nft_asset.image_url}} >
-    
-          <mat-grid-tile-footer> {{nft_asset.name}} </mat-grid-tile-footer>
+            >
+            
+            
+              
+              <img src= {{nft_asset.image_url}} >
+            
+              
+      
+              
+              
+              <mat-grid-tile-footer> {{nft_asset.name}} </mat-grid-tile-footer>
           </mat-grid-tile>
+
+
       </mat-grid-list>
     </div>
   
-
+  </div>

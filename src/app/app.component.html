@@ -9,20 +9,20 @@
       </mat-icon>
   </button>
 
-  <span class="menu">Final Finance <img class="menu-logo" src="./assets/img/deffi.png" />Silver Chipcoin</span>
+  <span class="menu">Crypto Website <img class="menu-logo" src="./assets/img/favicon.ico" /></span>
   
   <!-- <button style="background-color: rgb(53, 53, 138);" class="navbar-wallet-button" mat-raised-button color="primary" (click)="connectToMetaMask()">Wallet Connection{{metamask_accounts$ | async}}</button> -->
 
 
  
-    <div class="navbar-wallet-button" *ngIf="metamask_connected | async; else elseBlock">
+    <div class="navbar-wallet-button" *ngIf="(metamask_accounts !== undefined) && (metamask_accounts.length > 0); else elseBlock">
       <!-- Content to render when condition is true.  -->
-      <button  style="background-color: rgb(70, 138, 53);"  mat-raised-button color="primary">Wallet Connected</button>
+      <button  style="background-color: rgb(70, 138, 53);     box-shadow: 0px 0px 10px rgb(70, 138, 53);"  mat-raised-button color="primary">Wallet Connected</button>
     </div>
     <ng-template #elseBlock >
       <!-- Content to render when condition is false.  -->
       <div class="navbar-wallet-button">
-        <button style="background-color: rgb(53, 53, 138);"  mat-raised-button color="primary" (click)="connectToMetaMask()">Wallet Disconnected</button>
+        <button style="background-color: rgb(53, 53, 138); box-shadow: 0px 0px 18px rgb(53, 53, 138);"  mat-raised-button color="primary" (click)="connectToMetaMask()">Wallet Disconnected</button>
       </div>
     </ng-template>
 

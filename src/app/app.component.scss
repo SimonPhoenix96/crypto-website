@@ -1,9 +1,9 @@
 mat-toolbar {
+    z-index: 3;
     color: white;
     background-color: #1c1c1c;
     position: relative;
-    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.741);
-    z-index: 2;
+    box-shadow: 0px 5px 10px rgb(0, 0, 0);
 }
 
 
@@ -17,15 +17,15 @@ mat-sidenav {
     padding: 16px;
     text-align: center;
     background-color: #1c1c1c;
-    height: fit-content
+    height: fit-content;
 
     
 }
 
 mat-sidenav-container {
-    height: calc(100vh - 65px);
-    background-color: #1c1c1cd2; 
-
+    height: calc(100vh - 64px);
+    // page content background color
+    background-color: rgb(58, 58, 58);
 }
 
 mat-divider {
@@ -40,6 +40,7 @@ mat-divider {
     align-items: center;
     // justify-content: flex-start;
     font-size: 1rem;
+
 
 }
 

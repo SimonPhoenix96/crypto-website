@@ -1,0 +1,15 @@
+::ng-deep .dialog-nft-asset-tile-content{
+background-color: #1c1c1ce1;
+
+mat-dialog-container {
+    padding: 50;
+    color: rgba(213, 213, 213, 0.939);
+    font-size: 12px;
+    align-items: center;
+    background-color: transparent;
+}
+}
+
+::ng-deep .dialog-nft-asset-tile-backdrop{
+    background-color: rgba(0, 0, 0, 0.678);
+}

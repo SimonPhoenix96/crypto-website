@@ -1,0 +1,457 @@
+Info 0    [10:24:40.602] Starting TS Server
+Info 1    [10:24:40.602] Version: 4.5.5
+Info 2    [10:24:40.602] Arguments: /usr/bin/node /usr/lib/node_modules/typescript/lib/tsserver.js --logFile /home/jd/devEnvironment/Angular/crypto-website/.log/tsserver.log --logVerbosity info --cancellationPipeName /tmp/967c6275086e7d98c4727ddf6ce8346c/tscancellation*
+Info 3    [10:24:40.602] Platform: linux NodeVersion: 14 CaseSensitive: true
+Info 4    [10:24:40.602] ServerMode: undefined syntaxOnly: false hasUnknownServerMode: undefined
+Info 5    [10:24:40.611] Format host information updated
+Info 6    [10:24:40.626] Search path: /home/jd/devEnvironment/Angular/crypto-website/src/app
+Info 7    [10:24:40.627] For info: /home/jd/devEnvironment/Angular/crypto-website/src/app/app-routing.module.ts :: Config file name: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 8    [10:24:40.627] Creating configuration project /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 9    [10:24:40.645] Config: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json : {
+ "rootNames": [
+  "/home/jd/devEnvironment/Angular/crypto-website/e2e/src/app.e2e-spec.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/e2e/src/app.po.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/main.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/polyfills.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/test.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/app-routing.module.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/app.component.spec.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/app.component.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/app.module.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/ethers.service.spec.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/ethers.service.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/http.service.spec.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/http.service.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/block-explorer/block-explorer.component.spec.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/block-explorer/block-explorer.component.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/block-explorer/block.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/forum/forum.component.spec.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/forum/forum.component.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/help/help.component.spec.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/help/help.component.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/home/home.component.spec.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/home/home.component.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/nft-gallery/nft-gallery.component.spec.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/nft-gallery/nft-gallery.component.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/nft-gallery/nft_asset.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/not-found/not-found.component.spec.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/not-found/not-found.component.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/profile/profile.component.spec.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/profile/profile.component.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/wallet/wallet.component.spec.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/app/wallet/wallet.component.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/environments/environment.prod.ts",
+  "/home/jd/devEnvironment/Angular/crypto-website/src/environments/environment.ts"
+ ],
+ "options": {
+  "baseUrl": "/home/jd/devEnvironment/Angular/crypto-website",
+  "outDir": "/home/jd/devEnvironment/Angular/crypto-website/dist/out-tsc",
+  "sourceMap": true,
+  "declaration": false,
+  "downlevelIteration": true,
+  "experimentalDecorators": true,
+  "moduleResolution": 2,
+  "importHelpers": true,
+  "target": 2,
+  "module": 6,
+  "lib": [
+   "lib.es2018.d.ts",
+   "lib.dom.d.ts"
+  ],
+  "configFilePath": "/home/jd/devEnvironment/Angular/crypto-website/tsconfig.json"
+ }
+}
+Info 10   [10:24:40.845] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 11   [10:24:42.206] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 1360.6868509999476ms
+Info 12   [10:24:42.207] Project '/home/jd/devEnvironment/Angular/crypto-website/tsconfig.json' (Configured)
+Info 13   [10:24:42.207] 	Files (734)
+
+Info 14   [10:24:42.207] -----------------------------------------------
+Info 15   [10:24:42.220] Starting updateGraphWorker: Project: /dev/null/autoImportProviderProject1*
+Info 16   [10:24:42.642] Finishing updateGraphWorker: Project: /dev/null/autoImportProviderProject1* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 421.8336390000768ms
+Info 17   [10:24:42.642] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
+Info 18   [10:24:42.642] 	Files (530)
+
+Info 19   [10:24:42.642] -----------------------------------------------
+Info 20   [10:24:43.673] DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/.log/ti-23270.log 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website 1 undefined Config: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Wild card directory
+Info 21   [10:24:43.674] Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Detected file add/remove of non supported extension: /home/jd/devEnvironment/Angular/crypto-website/.log/ti-23270.log
+Info 22   [10:24:43.674] Elapsed:: 0.3324179998598993ms DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/.log/ti-23270.log 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website 1 undefined Config: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Wild card directory
+Info 23   [10:24:54.289] forEachExternalModuleToImportFrom autoImportProvider: 8.958486000075936
+Info 24   [10:26:07.406] forEachExternalModuleToImportFrom autoImportProvider: 2.2545590000227094
+Info 25   [10:26:25.249] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 26   [10:26:25.264] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 2 structureChanged: false structureIsReused:: Completely Elapsed: 14.993222000077367ms
+Info 27   [10:26:25.264] Different program with same set of files
+Info 28   [10:26:26.732] forEachExternalModuleToImportFrom autoImportProvider: 1.827532000374049
+Info 29   [10:26:26.945] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 30   [10:26:26.954] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 3 structureChanged: false structureIsReused:: Completely Elapsed: 9.114589999895543ms
+Info 31   [10:26:26.954] Different program with same set of files
+Info 32   [10:26:28.901] Format host information updated
+Info 33   [10:26:29.049] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 34   [10:26:29.058] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 4 structureChanged: false structureIsReused:: Completely Elapsed: 8.487980999983847ms
+Info 35   [10:26:29.058] Different program with same set of files
+Info 36   [10:26:29.664] Format host information updated
+Info 37   [10:26:29.765] Format host information updated
+Info 38   [10:26:29.913] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 39   [10:26:29.923] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 5 structureChanged: false structureIsReused:: Completely Elapsed: 9.403837000019848ms
+Info 40   [10:26:29.923] Different program with same set of files
+Info 41   [10:26:29.938] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 42   [10:26:29.947] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 6 structureChanged: false structureIsReused:: Completely Elapsed: 9.149118000175804ms
+Info 43   [10:26:29.947] Different program with same set of files
+Info 44   [10:26:29.979] Format host information updated
+Info 45   [10:26:30.103] Format host information updated
+Info 46   [10:26:30.249] Format host information updated
+Info 47   [10:26:30.429] Format host information updated
+Info 48   [10:26:30.431] Format host information updated
+Info 49   [10:26:30.577] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 50   [10:26:30.582] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 7 structureChanged: false structureIsReused:: Completely Elapsed: 5.0257470002397895ms
+Info 51   [10:26:30.582] Different program with same set of files
+Info 52   [10:26:30.583] getCompletionData: Get current token: 0.01796900015324354
+Info 53   [10:26:30.583] getCompletionData: Is inside comment: 0.03151999972760677
+Info 54   [10:26:30.584] getCompletionData: Get previous token: 0.2616190002299845
+Info 55   [10:26:30.584] getCompletionsAtPosition: isCompletionListBlocker: 0.17288900027051568
+Info 56   [10:26:30.587] getExportInfoMap: cache miss or empty; calculating new results
+Info 57   [10:26:30.651] forEachExternalModuleToImportFrom autoImportProvider: 26.155652000103146
+Info 58   [10:26:30.651] getExportInfoMap: done in 63.44594299979508 ms
+Info 59   [10:26:30.662] collectAutoImports: resolved 0 module specifiers, plus 0 ambient and 0 from cache
+Info 60   [10:26:30.662] collectAutoImports: response is complete
+Info 61   [10:26:30.662] collectAutoImports: 11.06051000021398
+Info 62   [10:26:30.662] getCompletionData: Semantic work: 77.82222800003365
+Info 63   [10:26:30.678] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 15.070801999885589
+Info 64   [10:26:51.134] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 65   [10:26:51.145] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 8 structureChanged: false structureIsReused:: Completely Elapsed: 10.798769999761134ms
+Info 66   [10:26:51.145] Different program with same set of files
+Info 67   [10:26:51.187] Format host information updated
+Info 68   [10:26:51.210] Format host information updated
+Info 69   [10:26:51.232] Format host information updated
+Info 70   [10:26:51.411] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 71   [10:26:51.421] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 9 structureChanged: false structureIsReused:: Completely Elapsed: 10.057293999940157ms
+Info 72   [10:26:51.421] Different program with same set of files
+Info 73   [10:26:55.643] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 74   [10:26:55.650] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 10 structureChanged: false structureIsReused:: Completely Elapsed: 6.593611000105739ms
+Info 75   [10:26:55.650] Different program with same set of files
+Info 76   [10:26:56.237] Format host information updated
+Info 77   [10:26:56.386] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 78   [10:26:56.394] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 11 structureChanged: false structureIsReused:: Completely Elapsed: 8.49766100011766ms
+Info 79   [10:26:56.394] Different program with same set of files
+Info 80   [10:26:56.699] Format host information updated
+Info 81   [10:26:56.847] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 82   [10:26:56.855] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 12 structureChanged: false structureIsReused:: Completely Elapsed: 8.332861999981105ms
+Info 83   [10:26:56.856] Different program with same set of files
+Info 84   [10:26:58.456] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 85   [10:26:58.461] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 13 structureChanged: false structureIsReused:: Completely Elapsed: 5.510475999675691ms
+Info 86   [10:26:58.461] Different program with same set of files
+Info 87   [10:26:59.420] Format host information updated
+Info 88   [10:26:59.644] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 89   [10:26:59.651] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 14 structureChanged: false structureIsReused:: Completely Elapsed: 7.09961700020358ms
+Info 90   [10:26:59.651] Different program with same set of files
+Info 91   [10:27:00.727] Format host information updated
+Info 92   [10:27:00.729] Format host information updated
+Info 93   [10:27:00.740] Format host information updated
+Info 94   [10:27:00.941] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 95   [10:27:00.947] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 15 structureChanged: false structureIsReused:: Completely Elapsed: 6.201571000274271ms
+Info 96   [10:27:00.947] Different program with same set of files
+Info 97   [10:27:17.909] Format host information updated
+Info 98   [10:27:18.134] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 99   [10:27:18.141] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 16 structureChanged: false structureIsReused:: Completely Elapsed: 6.669440999627113ms
+Info 100  [10:27:18.141] Different program with same set of files
+Info 101  [10:27:32.471] forEachExternalModuleToImportFrom autoImportProvider: 2.2805900000967085
+Info 102  [10:27:32.654] Format host information updated
+Info 103  [10:27:32.668] Format host information updated
+Info 104  [10:27:32.690] Format host information updated
+Info 105  [10:27:32.691] Format host information updated
+Info 106  [10:27:32.712] Format host information updated
+Info 107  [10:27:32.714] Format host information updated
+Info 108  [10:27:33.004] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 109  [10:27:33.010] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 17 structureChanged: false structureIsReused:: Completely Elapsed: 5.649525000248104ms
+Info 110  [10:27:33.010] Different program with same set of files
+Info 111  [10:29:27.662] Format host information updated
+Info 112  [10:29:27.786] Format host information updated
+Info 113  [10:29:27.934] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 114  [10:29:27.940] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 18 structureChanged: false structureIsReused:: Completely Elapsed: 6.013323000166565ms
+Info 115  [10:29:27.940] Different program with same set of files
+Info 116  [10:29:28.023] Format host information updated
+Info 117  [10:29:28.168] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 118  [10:29:28.174] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 19 structureChanged: false structureIsReused:: Completely Elapsed: 5.718885000329465ms
+Info 119  [10:29:28.174] Different program with same set of files
+Info 120  [10:29:28.174] getCompletionData: Get current token: 0.002230000216513872
+Info 121  [10:29:28.174] getCompletionData: Is inside comment: 0.009339000098407269
+Info 122  [10:29:28.174] getCompletionData: Get previous token: 0.018130000215023756
+Info 123  [10:29:28.174] getCompletionsAtPosition: isCompletionListBlocker: 0.008729999884963036
+Info 124  [10:29:28.177] getExportInfoMap: cache hit
+Info 125  [10:29:28.191] collectAutoImports: resolved 30 module specifiers, plus 5 ambient and -307 from cache
+Info 126  [10:29:28.191] collectAutoImports: response is complete
+Info 127  [10:29:28.191] collectAutoImports: 14.525907000061125
+Info 128  [10:29:28.191] getCompletionData: Semantic work: 17.087545999791473
+Info 129  [10:29:28.201] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 9.951976999640465
+Info 130  [10:29:39.163] forEachExternalModuleToImportFrom autoImportProvider: 1.5114430002868176
+Info 131  [10:29:44.404] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 132  [10:29:44.411] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 20 structureChanged: false structureIsReused:: Completely Elapsed: 7.065609999932349ms
+Info 133  [10:29:44.411] Different program with same set of files
+Info 134  [10:29:50.110] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 135  [10:29:50.115] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 21 structureChanged: false structureIsReused:: Completely Elapsed: 5.2883469997905195ms
+Info 136  [10:29:50.115] Different program with same set of files
+Info 137  [10:29:50.163] Format host information updated
+Info 138  [10:29:50.185] Format host information updated
+Info 139  [10:29:50.206] Format host information updated
+Info 140  [10:29:50.410] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 141  [10:29:50.414] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 22 structureChanged: false structureIsReused:: Completely Elapsed: 4.177062000147998ms
+Info 142  [10:29:50.414] Different program with same set of files
+Info 143  [10:29:54.481] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 144  [10:29:54.487] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 23 structureChanged: false structureIsReused:: Completely Elapsed: 5.661115000024438ms
+Info 145  [10:29:54.487] Different program with same set of files
+Info 146  [10:29:54.536] Format host information updated
+Info 147  [10:29:54.538] Format host information updated
+Info 148  [10:29:54.540] Format host information updated
+Info 149  [10:29:54.541] Format host information updated
+Info 150  [10:29:54.743] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 151  [10:29:54.747] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 24 structureChanged: false structureIsReused:: Completely Elapsed: 4.224572000093758ms
+Info 152  [10:29:54.747] Different program with same set of files
+Info 153  [10:29:54.856] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 154  [10:29:54.860] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 25 structureChanged: false structureIsReused:: Completely Elapsed: 3.9837319999933243ms
+Info 155  [10:29:54.860] Different program with same set of files
+Info 156  [10:29:54.909] Format host information updated
+Info 157  [10:29:55.057] getCompletionData: Get current token: 0.007209999952465296
+Info 158  [10:29:55.057] getCompletionData: Is inside comment: 0.03178000031039119
+Info 159  [10:29:55.057] getCompletionData: Get previous token: 0.023000000044703484
+Info 160  [10:29:55.057] getCompletionsAtPosition: isCompletionListBlocker: 0.002120000310242176
+Info 161  [10:29:55.058] getCompletionData: Get current token: 0.005859999917447567
+Info 162  [10:29:55.058] getCompletionData: Is inside comment: 0.023920000065118074
+Info 163  [10:29:55.058] getCompletionData: Get previous token: 0.02302000019699335
+Info 164  [10:29:55.058] getCompletionsAtPosition: isCompletionListBlocker: 0.0012999996542930603
+Info 165  [10:29:55.066] getCompletionData: Get current token: 0.0053100003860890865
+Info 166  [10:29:55.066] getCompletionData: Is inside comment: 0.02215000009164214
+Info 167  [10:29:55.066] getCompletionData: Get previous token: 0.021360000129789114
+Info 168  [10:29:55.066] getCompletionsAtPosition: isCompletionListBlocker: 0.002520000096410513
+Info 169  [10:29:55.067] getCompletionData: Get current token: 0.005309999920427799
+Info 170  [10:29:55.067] getCompletionData: Is inside comment: 0.02164000039920211
+Info 171  [10:29:55.067] getCompletionData: Get previous token: 0.022419999819248915
+Info 172  [10:29:55.067] getCompletionsAtPosition: isCompletionListBlocker: 0.002739999908953905
+Info 173  [10:30:19.432] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 174  [10:30:19.475] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 26 structureChanged: true structureIsReused:: SafeModules Elapsed: 42.590793000068516ms
+Info 175  [10:30:19.475] Different program with same set of files
+Info 176  [10:30:47.515] DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website 1 undefined Config: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Wild card directory
+Info 177  [10:30:47.516] Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Detected file add/remove of non supported extension: /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts#
+Info 178  [10:30:47.516] Elapsed:: 0.3701989999972284ms DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website 1 undefined Config: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Wild card directory
+Info 179  [10:30:47.516] DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website/src 1 undefined Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Failed Lookup Locations
+Info 180  [10:30:47.516] Elapsed:: 0.1104190000332892ms DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website/src 1 undefined Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Failed Lookup Locations
+Info 181  [10:30:48.093] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 182  [10:30:48.097] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 27 structureChanged: false structureIsReused:: Completely Elapsed: 4.36574099957943ms
+Info 183  [10:30:48.097] Different program with same set of files
+Info 184  [10:30:48.386] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 185  [10:30:48.391] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 28 structureChanged: false structureIsReused:: Completely Elapsed: 4.896058999933302ms
+Info 186  [10:30:48.391] Different program with same set of files
+Info 187  [10:30:50.281] DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website 1 undefined Config: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Wild card directory
+Info 188  [10:30:50.281] Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Detected file add/remove of non supported extension: /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts#
+Info 189  [10:30:50.281] Elapsed:: 0.10800999961793423ms DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website 1 undefined Config: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Wild card directory
+Info 190  [10:30:50.281] DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website/src 1 undefined Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Failed Lookup Locations
+Info 191  [10:30:50.281] Elapsed:: 0.03215999994426966ms DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website/src 1 undefined Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Failed Lookup Locations
+Info 192  [10:30:59.599] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 193  [10:30:59.608] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 29 structureChanged: false structureIsReused:: Completely Elapsed: 9.33259900007397ms
+Info 194  [10:30:59.609] Different program with same set of files
+Info 195  [10:31:05.438] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 196  [10:31:05.444] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 30 structureChanged: false structureIsReused:: Completely Elapsed: 6.292422999627888ms
+Info 197  [10:31:05.444] Different program with same set of files
+Info 198  [10:31:05.719] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 199  [10:31:05.725] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 31 structureChanged: false structureIsReused:: Completely Elapsed: 5.6884360001422465ms
+Info 200  [10:31:05.725] Different program with same set of files
+Info 201  [10:31:05.989] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 202  [10:31:05.995] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 32 structureChanged: false structureIsReused:: Completely Elapsed: 6.228832999709994ms
+Info 203  [10:31:05.995] Different program with same set of files
+Info 204  [10:31:06.214] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 205  [10:31:06.251] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 33 structureChanged: true structureIsReused:: SafeModules Elapsed: 36.60282099992037ms
+Info 206  [10:31:06.251] Different program with same set of files
+Info 207  [10:31:10.836] Format host information updated
+Info 208  [10:31:10.859] Format host information updated
+Info 209  [10:31:10.862] Format host information updated
+Info 210  [10:31:11.063] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 211  [10:31:11.070] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 34 structureChanged: false structureIsReused:: Completely Elapsed: 7.332208000123501ms
+Info 212  [10:31:11.070] Different program with same set of files
+Info 213  [10:31:12.884] Format host information updated
+Info 214  [10:31:13.087] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 215  [10:31:13.093] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 35 structureChanged: false structureIsReused:: Completely Elapsed: 6.5210720002651215ms
+Info 216  [10:31:13.093] Different program with same set of files
+Info 217  [10:31:24.076] forEachExternalModuleToImportFrom autoImportProvider: 1.0694559998810291
+Info 218  [10:31:46.937] Format host information updated
+Info 219  [10:31:47.443] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 220  [10:31:47.452] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 36 structureChanged: false structureIsReused:: Completely Elapsed: 8.370143999811262ms
+Info 221  [10:31:47.452] Different program with same set of files
+Info 222  [10:31:48.402] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 223  [10:31:48.413] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 37 structureChanged: false structureIsReused:: Completely Elapsed: 11.160922000184655ms
+Info 224  [10:31:48.413] Different program with same set of files
+Info 225  [10:31:49.504] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 226  [10:31:49.510] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 38 structureChanged: false structureIsReused:: Completely Elapsed: 5.6449859999120235ms
+Info 227  [10:31:49.510] Different program with same set of files
+Info 228  [10:31:51.046] DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website 1 undefined Config: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Wild card directory
+Info 229  [10:31:51.046] Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Detected file add/remove of non supported extension: /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts#
+Info 230  [10:31:51.046] Elapsed:: 0.11399899981915951ms DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website 1 undefined Config: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Wild card directory
+Info 231  [10:31:51.046] DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website/src 1 undefined Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Failed Lookup Locations
+Info 232  [10:31:51.046] Elapsed:: 0.03688000002875924ms DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website/src 1 undefined Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Failed Lookup Locations
+Info 233  [10:31:51.204] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 234  [10:31:51.209] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 39 structureChanged: false structureIsReused:: Completely Elapsed: 4.553769999649376ms
+Info 235  [10:31:51.209] Different program with same set of files
+Info 236  [10:31:52.697] Format host information updated
+Info 237  [10:31:52.711] Format host information updated
+Info 238  [10:31:52.733] Format host information updated
+Info 239  [10:31:52.844] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 240  [10:31:52.849] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 40 structureChanged: false structureIsReused:: Completely Elapsed: 5.123288000002503ms
+Info 241  [10:31:52.849] Different program with same set of files
+Info 242  [10:31:54.751] forEachExternalModuleToImportFrom autoImportProvider: 1.18396499985829
+Info 243  [10:31:56.387] forEachExternalModuleToImportFrom autoImportProvider: 1.796862999908626
+Info 244  [10:31:56.879] DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website 1 undefined Config: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Wild card directory
+Info 245  [10:31:56.879] Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Detected file add/remove of non supported extension: /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts#
+Info 246  [10:31:56.879] Elapsed:: 0.09991999994963408ms DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website 1 undefined Config: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Wild card directory
+Info 247  [10:31:56.879] DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website/src 1 undefined Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Failed Lookup Locations
+Info 248  [10:31:56.879] Elapsed:: 0.029180000070482492ms DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website/src 1 undefined Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Failed Lookup Locations
+Info 249  [10:31:58.883] forEachExternalModuleToImportFrom autoImportProvider: 0.6908869999460876
+Info 250  [10:32:11.777] forEachExternalModuleToImportFrom autoImportProvider: 0.6491769999265671
+Info 251  [10:32:12.250] Format host information updated
+Info 252  [10:32:12.464] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 253  [10:32:12.468] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 41 structureChanged: false structureIsReused:: Completely Elapsed: 3.684413999784738ms
+Info 254  [10:32:12.468] Different program with same set of files
+Info 255  [10:32:19.204] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 256  [10:32:19.212] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 42 structureChanged: false structureIsReused:: Completely Elapsed: 8.532993000000715ms
+Info 257  [10:32:19.212] Different program with same set of files
+Info 258  [10:32:25.312] Format host information updated
+Info 259  [10:32:25.335] Format host information updated
+Info 260  [10:32:25.336] Format host information updated
+Info 261  [10:32:25.338] Format host information updated
+Info 262  [10:32:25.340] Format host information updated
+Info 263  [10:32:25.347] Format host information updated
+Info 264  [10:32:25.350] Format host information updated
+Info 265  [10:32:25.372] Format host information updated
+Info 266  [10:32:25.374] Format host information updated
+Info 267  [10:32:25.395] Format host information updated
+Info 268  [10:32:25.397] Format host information updated
+Info 269  [10:32:25.621] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 270  [10:32:25.626] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 43 structureChanged: false structureIsReused:: Completely Elapsed: 4.922209999989718ms
+Info 271  [10:32:25.626] Different program with same set of files
+Info 272  [10:32:26.392] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 273  [10:32:26.396] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 44 structureChanged: false structureIsReused:: Completely Elapsed: 4.388501000124961ms
+Info 274  [10:32:26.396] Different program with same set of files
+Info 275  [10:32:26.720] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 276  [10:32:26.726] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 45 structureChanged: false structureIsReused:: Completely Elapsed: 5.349066999740899ms
+Info 277  [10:32:26.726] Different program with same set of files
+Info 278  [10:32:26.775] Format host information updated
+Info 279  [10:32:26.777] Format host information updated
+Info 280  [10:32:26.798] Format host information updated
+Info 281  [10:32:26.978] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 282  [10:32:26.982] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 46 structureChanged: false structureIsReused:: Completely Elapsed: 3.934863999951631ms
+Info 283  [10:32:26.982] Different program with same set of files
+Info 284  [10:32:29.374] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 285  [10:32:29.379] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 47 structureChanged: false structureIsReused:: Completely Elapsed: 5.205918000079691ms
+Info 286  [10:32:29.379] Different program with same set of files
+Info 287  [10:32:30.058] Format host information updated
+Info 288  [10:32:30.206] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 289  [10:32:30.210] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 48 structureChanged: false structureIsReused:: Completely Elapsed: 4.285801999736577ms
+Info 290  [10:32:30.210] Different program with same set of files
+Info 291  [10:32:30.306] Format host information updated
+Info 292  [10:32:30.453] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 293  [10:32:30.458] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 49 structureChanged: false structureIsReused:: Completely Elapsed: 4.136052000336349ms
+Info 294  [10:32:30.458] Different program with same set of files
+Info 295  [10:32:31.253] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 296  [10:32:31.257] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 50 structureChanged: false structureIsReused:: Completely Elapsed: 4.656998999882489ms
+Info 297  [10:32:31.257] Different program with same set of files
+Info 298  [10:32:33.164] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 299  [10:32:33.169] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 51 structureChanged: false structureIsReused:: Completely Elapsed: 5.228526999708265ms
+Info 300  [10:32:33.169] Different program with same set of files
+Info 301  [10:32:33.446] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 302  [10:32:33.451] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 52 structureChanged: false structureIsReused:: Completely Elapsed: 5.03727800026536ms
+Info 303  [10:32:33.451] Different program with same set of files
+Info 304  [10:32:34.358] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 305  [10:32:34.364] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 53 structureChanged: false structureIsReused:: Completely Elapsed: 5.7636339999735355ms
+Info 306  [10:32:34.364] Different program with same set of files
+Info 307  [10:42:19.739] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 308  [10:42:19.744] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 54 structureChanged: false structureIsReused:: Completely Elapsed: 5.6992779998108745ms
+Info 309  [10:42:19.744] Different program with same set of files
+Info 310  [10:42:20.448] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 311  [10:42:20.454] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 55 structureChanged: false structureIsReused:: Completely Elapsed: 5.966895999852568ms
+Info 312  [10:42:20.454] Different program with same set of files
+Info 313  [10:42:44.717] DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website 1 undefined Config: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Wild card directory
+Info 314  [10:42:44.717] Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Detected file add/remove of non supported extension: /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts#
+Info 315  [10:42:44.717] Elapsed:: 0.10764899989590049ms DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website 1 undefined Config: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Wild card directory
+Info 316  [10:42:44.717] DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website/src 1 undefined Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Failed Lookup Locations
+Info 317  [10:42:44.717] Elapsed:: 0.027710000053048134ms DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website/src 1 undefined Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Failed Lookup Locations
+Info 318  [10:43:05.537] DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website 1 undefined Config: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Wild card directory
+Info 319  [10:43:05.537] Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Detected file add/remove of non supported extension: /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts#
+Info 320  [10:43:05.537] Elapsed:: 0.08284999988973141ms DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website 1 undefined Config: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Wild card directory
+Info 321  [10:43:05.537] DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website/src 1 undefined Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Failed Lookup Locations
+Info 322  [10:43:05.537] Elapsed:: 0.02599999960511923ms DirectoryWatcher:: Triggered with /home/jd/devEnvironment/Angular/crypto-website/src/app/#app-routing.module.ts# 0:: WatchInfo: /home/jd/devEnvironment/Angular/crypto-website/src 1 undefined Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json WatchType: Failed Lookup Locations
+Info 323  [10:43:06.201] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 324  [10:43:06.210] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 56 structureChanged: false structureIsReused:: Completely Elapsed: 8.755046000238508ms
+Info 325  [10:43:06.210] Different program with same set of files
+Info 326  [10:43:09.408] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 327  [10:43:09.413] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 57 structureChanged: false structureIsReused:: Completely Elapsed: 4.942981000058353ms
+Info 328  [10:43:09.413] Different program with same set of files
+Info 329  [10:43:11.673] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 330  [10:43:11.678] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 58 structureChanged: false structureIsReused:: Completely Elapsed: 4.281981999985874ms
+Info 331  [10:43:11.678] Different program with same set of files
+Info 332  [10:43:13.482] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 333  [10:43:13.489] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 59 structureChanged: false structureIsReused:: Completely Elapsed: 7.3165210001170635ms
+Info 334  [10:43:13.489] Different program with same set of files
+Info 335  [10:43:14.054] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 336  [10:43:14.058] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 60 structureChanged: false structureIsReused:: Completely Elapsed: 4.305031999945641ms
+Info 337  [10:43:14.058] Different program with same set of files
+Info 338  [10:43:14.582] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 339  [10:43:14.586] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 61 structureChanged: false structureIsReused:: Completely Elapsed: 3.9145649997517467ms
+Info 340  [10:43:14.586] Different program with same set of files
+Info 341  [10:43:15.009] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 342  [10:43:15.013] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 62 structureChanged: false structureIsReused:: Completely Elapsed: 3.8795340000651777ms
+Info 343  [10:43:15.013] Different program with same set of files
+Info 344  [10:43:15.449] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 345  [10:43:15.453] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 63 structureChanged: false structureIsReused:: Completely Elapsed: 3.726965000387281ms
+Info 346  [10:43:15.453] Different program with same set of files
+Info 347  [10:43:15.820] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 348  [10:43:15.824] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 64 structureChanged: false structureIsReused:: Completely Elapsed: 4.190204000100493ms
+Info 349  [10:43:15.824] Different program with same set of files
+Info 350  [10:43:16.375] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 351  [10:43:16.379] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 65 structureChanged: false structureIsReused:: Completely Elapsed: 3.844434999860823ms
+Info 352  [10:43:16.379] Different program with same set of files
+Info 353  [10:43:16.664] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 354  [10:43:16.667] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 66 structureChanged: false structureIsReused:: Completely Elapsed: 3.291577000170946ms
+Info 355  [10:43:16.667] Different program with same set of files
+Info 356  [10:43:18.180] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 357  [10:43:18.186] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 67 structureChanged: false structureIsReused:: Completely Elapsed: 5.325648999772966ms
+Info 358  [10:43:18.186] Different program with same set of files
+Info 359  [10:43:18.186] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 360  [10:43:18.189] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 68 structureChanged: false structureIsReused:: Completely Elapsed: 3.4866360002197325ms
+Info 361  [10:43:18.189] Different program with same set of files
+Info 362  [10:43:18.632] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 363  [10:43:18.638] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 69 structureChanged: false structureIsReused:: Completely Elapsed: 6.812192999757826ms
+Info 364  [10:43:18.639] Different program with same set of files
+Info 365  [10:43:18.639] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 366  [10:43:18.643] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 70 structureChanged: false structureIsReused:: Completely Elapsed: 3.8610749999061227ms
+Info 367  [10:43:18.643] Different program with same set of files
+Info 368  [10:43:19.431] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 369  [10:43:19.435] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 71 structureChanged: false structureIsReused:: Completely Elapsed: 4.464232999831438ms
+Info 370  [10:43:19.436] Different program with same set of files
+Info 371  [10:43:21.243] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 372  [10:43:21.247] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 72 structureChanged: false structureIsReused:: Completely Elapsed: 3.842614999972284ms
+Info 373  [10:43:21.247] Different program with same set of files
+Info 374  [10:43:22.288] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 375  [10:43:22.292] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 73 structureChanged: false structureIsReused:: Completely Elapsed: 3.8044340000487864ms
+Info 376  [10:43:22.292] Different program with same set of files
+Info 377  [10:43:22.884] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 378  [10:43:22.888] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 74 structureChanged: false structureIsReused:: Completely Elapsed: 3.7715850002132356ms
+Info 379  [10:43:22.888] Different program with same set of files
+Info 380  [10:43:23.324] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 381  [10:43:23.329] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 75 structureChanged: false structureIsReused:: Completely Elapsed: 4.901980000082403ms
+Info 382  [10:43:23.329] Different program with same set of files
+Info 383  [10:43:25.732] Format host information updated
+Info 384  [10:43:25.734] Format host information updated
+Info 385  [10:43:25.735] Format host information updated
+Info 386  [10:43:25.736] Format host information updated
+Info 387  [10:43:25.939] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 388  [10:43:25.950] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 76 structureChanged: false structureIsReused:: Completely Elapsed: 10.704967000056058ms
+Info 389  [10:43:25.950] Different program with same set of files
+Info 390  [10:43:31.444] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 391  [10:43:31.448] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 77 structureChanged: false structureIsReused:: Completely Elapsed: 3.8228850001469254ms
+Info 392  [10:43:31.448] Different program with same set of files
+Info 393  [10:43:31.762] Format host information updated
+Info 394  [10:43:31.895] Format host information updated
+Info 395  [10:43:32.041] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 396  [10:43:32.045] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 78 structureChanged: false structureIsReused:: Completely Elapsed: 3.6562049998901784ms
+Info 397  [10:43:32.045] Different program with same set of files
+Info 398  [10:43:32.045] Starting updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json
+Info 399  [10:43:32.048] Finishing updateGraphWorker: Project: /home/jd/devEnvironment/Angular/crypto-website/tsconfig.json Version: 79 structureChanged: false structureIsReused:: Completely Elapsed: 2.978128000162542ms
+Info 400  [10:43:32.048] Different program with same set of files
+Info 401  [10:43:32.097] Format host information updated

@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { WalletComponent } from './wallet/wallet.component';
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule,FormsModule } from "@angular/forms";
 import { BlockExplorerComponent } from './block-explorer/block-explorer.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -22,8 +22,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { NftGalleryComponent } from './nft-gallery/nft-gallery.component' 
 import {MatGridListModule} from '@angular/material/grid-list';
-
+import {MatInputModule} from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatMenuModule} from '@angular/material/menu';
 
 // import { FormControl} from '@angular/forms';
 
@@ -42,9 +46,15 @@ import { HttpClientModule } from '@angular/common/http';
     MatDividerModule,
     ReactiveFormsModule,
     MatChipsModule,
+    FormsModule,
     MatFormFieldModule,
+    MatInputModule,
     MatTableModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule,
+    MatPaginatorModule,
+    MatTabsModule,
+    MatMenuModule
 
   ],
   providers: [],

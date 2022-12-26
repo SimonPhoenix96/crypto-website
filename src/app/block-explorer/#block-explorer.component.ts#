@@ -11,7 +11,6 @@ import {MatPaginator} from '@angular/material/paginator';
 import { Observable, timer, Subscription, Subject,interval } from 'rxjs';
 import {Block } from './block'
 
-
 // const ELEMENT_DATA: Block[] = [
 //   {hash: '0x4ea35eaf2fc60c6fa22a510578b739c752d6b9637845a6c560b13c997e0d2055', block_number: 0},
 //   {hash: '0x72e51794b93616598b7357af81152df0d11b646e6e1ba5efcf3a3e91f3f4f41d', block_number: 0},
@@ -53,7 +52,7 @@ export class BlockExplorerComponent implements OnInit, OnDestroy, AfterViewInit 
   add(event: MatChipInputEvent): void {
     const input = event.input;
     const value = event.value;
-   
+    
     // adding hashes
     if ((value || '').trim()) {
       this.chip_list_blocks.push({ block_number: 0, hash: value.trim(), validator: '', number_transactions: 0, time: ''});

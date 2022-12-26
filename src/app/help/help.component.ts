@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+export interface DialogData {
+  animal: string;
+  name: string;
+}
+
 @Component({
   selector: 'app-help',
   templateUrl: './help.component.html',
@@ -7,9 +12,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelpComponent implements OnInit {
 
-  constructor() { }
+ 
+  constructor() {}
 
   ngOnInit(): void {
   }
+
 
 }

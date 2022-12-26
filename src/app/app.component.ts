@@ -20,30 +20,30 @@ import {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'final-finance';
+  title = 'crypto-website';
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
 
   constructor(private observer: BreakpointObserver, private EthersService: EthersService) {}
 
-  metamask_accounts: any[] = [];
+  metamask_accounts: any[];
   metamask_accounts$: Subscription;
   provider_metamask: any;
   provider_metamask$: Subscription; 
-  metamask_connected: false;
 
   ngOnInit(): void {
 
-    this.metamask_accounts$ = this.EthersService.getMetaMaskAccounts().subscribe(value => {
-      console.log("app-component -- this.EthersService.getMetaMaskAccounts() - value = " + JSON.stringify(value))
-      this.metamask_accounts = value 
-    })
 
     this.provider_metamask$ = this.EthersService.getMetaMaskProvider().subscribe(value => {
-      console.log("app-component -- this.EthersService.getMetaMaskProvider() - value = " + JSON.stringify(value))
-       let local_metamask_accounts = JSON.parse(JSON.stringify(value));
-      this.provider_metamask = value 
+      // console.log("app-component -- this.EthersService.getMetaMaskProvider() - value = " + JSON.stringify(value))
+      //  let local_metamask_accounts = JSON.parse(JSON.stringify(value));
+      this.provider_metamask = value
+      this.getMetaMaskAccounts()
+
     })
+
+          // console.log("app-component -- this.provider_metamask.listAccounts() - value = " + JSON.stringify(this.provider_metamask.listAccounts()))
+
 
 
   }
@@ -66,10 +66,16 @@ export class AppComponent implements OnInit {
   }
 
 
-  async connectToMetaMask(){
+   connectToMetaMask(){
     console.log('app-component -- connectToMetaMask() - Connecting To Metamask!');
+ 
     this.EthersService.connectToMetaMask();
     
+  }
+
+  async getMetaMaskAccounts(){
+    let local_metamask_accounts = await this.provider_metamask.listAccounts()
+    this.metamask_accounts = local_metamask_accounts
   }
 
   

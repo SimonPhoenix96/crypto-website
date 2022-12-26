@@ -1,0 +1,19 @@
+[10:19:17.151] Global cache location '/home/jd/.cache/typescript/4.5', safe file path '/usr/lib/node_modules/typescript/lib/typingSafeList.json', types map path /usr/lib/node_modules/typescript/lib/typesMap.json
+[10:19:17.151] Processing cache location '/home/jd/.cache/typescript/4.5'
+[10:19:17.151] Trying to find '/home/jd/.cache/typescript/4.5/package.json'...
+[10:19:17.151] Loaded content of '/home/jd/.cache/typescript/4.5/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.580"}}
+[10:19:17.151] Loaded content of '/home/jd/.cache/typescript/4.5/package-lock.json'
+[10:19:17.151] Finished processing cache location '/home/jd/.cache/typescript/4.5'
+[10:19:17.152] Process id: 17930
+[10:19:17.152] NPM location: /usr/bin/npm (explicit '--npmLocation' not  provided)
+[10:19:17.152] validateDefaultNpmLocation: false
+[10:19:17.152] Npm config file: /home/jd/.cache/typescript/4.5/package.json
+[10:19:17.152] Updating types-registry npm package...
+[10:19:17.152] Exec: /usr/bin/npm install --ignore-scripts types-registry@latest
+[10:19:17.762]     Succeeded. stdout:
+    
+    up to date, audited 2 packages in 530ms
+
+found 0 vulnerabilities
+
+[10:19:17.762] Updated types-registry npm package

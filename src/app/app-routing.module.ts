@@ -13,16 +13,17 @@ const routes: Routes = [
   {path: 'profile', component: ProfileComponent},
   {path: 'wallet', component: WalletComponent},
   {path: 'nft-gallery', component: NftGalleryComponent},
-  {path: 'block-explorer', component: BlockExplorerComponent},
-  {path: 'forum', component: ForumComponent},
-  {path: 'help', component: HelpComponent},
-  { path: '**', component: NftGalleryComponent },  // Wildcard route for a 404 page, for debugging purposes directing to currently component im working on
-
+   { path: 'block-explorer', component: BlockExplorerComponent },
+    { path: 'forum', component: ForumComponent },
+    { path: 'help', component: HelpComponent },
+    { path: '**', component: NftGalleryComponent },  // Wildcard route for a 404 page, for debugging purposes directing to currently component im working on
+    
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+	imports: [RouterModule.forRoot(routes)],
+	exports: [RouterModule]
 })
 export class AppRoutingModule { }  
+

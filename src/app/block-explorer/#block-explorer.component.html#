@@ -8,6 +8,7 @@
 
 
 
+
   
   <mat-tab-group mat-align-tabs="center" animationDuration="1000ms">
     <mat-tab label="Live Block Explorer"> 

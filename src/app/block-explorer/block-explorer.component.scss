@@ -12,7 +12,7 @@ mat-form-field{
   overflow-y: scroll;
   overflow-x: hidden;
   justify-content: center;
-  background-color: #1c1c1c00;
+  // background-color: #1c1c1c00;
 }
 
 mat-label{
@@ -23,7 +23,7 @@ mat-label{
   // height: 20%;
   font-size: 16px;
   position: relative;
-  z-index: 200;
+  
 
 
 }
@@ -32,13 +32,16 @@ mat-label{
 td, th {
   text-align: center !important;
   vertical-align: middle !important;
+  
 }
 
 .mat-cell {
   color: white;
+  border-bottom: 3px solid rgb(255, 255, 255);
 }
 .mat-header-cell{
   color: white;
+  border-bottom: 3px solid rgb(255, 255, 255);
 }
 
 table{
@@ -46,6 +49,7 @@ table{
   width: 100%;
   text-align: center !important;
   vertical-align: middle !important;  
+  
 }
 
 .block-explorer-input{
@@ -61,77 +65,100 @@ table{
 }
 
 .block-explorer-content {
-  height: calc(100vh - 98px);
-  border-radius: 10px;
-  margin: 16px;
-  margin-left: 32px;
+  height:60%;
 
-  // display: block;
-  // justify-content: center;
-  // align-items: center;
-
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 1%;
+  padding-bottom: 2%;
   font-size: 2rem;
   color: lightgray;
-  background-color: #1c1c1c; 
   
   position: relative;
-
+  
   // border: 7px solid rgb(239, 205, 112);
-
+  
   // object-fit: cover;
   // width: 100%;
   // height: 100%;
 
+  mat-tab-group{
+    
+    align-content: center;
+    width: 100%;
+    mat-tab {
+      table {
+  
+        box-shadow: 0px 5px 30px rgb(0, 0, 0);
+    
+      }
+
+    }
+    
+    
+    }
+
+
 }
 
-  .block-explorer-top-container {
-    width: 100%;
-    height: 30%;
-    position: relative;
-    // border: 7px solid rgb(133, 239, 112);
-    top: 0;
-    border-bottom: 5px solid rgb(255, 255, 255);
-  }
+
+// .block-explorer-top-container {
+//   height: 30%;
+//   box-shadow: 0px 5px 10px rgb(0, 0, 0);
+//   background-color: #1c1c1c; 
+//     position: relative;
+//     // border: 7px solid rgb(133, 239, 112);
+//     top: 0;
+//     border-bottom: 5px solid rgb(255, 255, 255);
+//   }
 
 
-  .block-explorer-middle-container {
-    
-    text-align: center;
+//   .block-explorer-middle-container {
+//     box-shadow: 0px 5px 10px rgb(0, 0, 0);
+//     text-align: center;
+//     background-color: #1c1c1c; 
 
-    width: 100%;
-    height: 20%;
-    position: relative;
-    border-bottom: 5px solid rgb(255, 255, 255);
-    // border: 7px solid rgb(171, 80, 223);
-    top: 0;
-    // z-index: 90;
-  }
+//     width: 100%;
+//     height: 10%;
+//     position: relative;
+//     border-bottom: 5px solid rgb(255, 255, 255);
+//     // border: 7px solid rgb(171, 80, 223);
+//     top: 0;
+//   }
 
-  .block-explorer-bottom-container {
-    
-    text-align: center;
-
-    width: 100%;
-    height: 50%;
-    position: relative;
-    // border: 7px solid rgb(233, 57, 57);
-    bottom: 0;
-  }
-
-
+//   .block-explorer-bottom-container {
+//     // box-shadow: 0px 5px 10px rgb(0, 0, 0);
+//     text-align: center;
+//     // background-color: #1c1c1c; 
+//     padding-top: 25%;
+//     width: 100%;
+//     position: relative;
+//     // border: 7px solid rgb(233, 57, 57);
+//     padding-bottom: 10px;
+//   }
 
 
-  .block-explorer-list{
-    color: white;
-    width: 100%;
-    height: 80%;
-    position: relative;
 
-  }
 
-.block-explorer-chips{
-  color: rgb(2, 77, 90);
-  width: fit-content;
-  justify-content: center;
+//   .block-explorer-list{
+//     color: white;
+//     width: 100%;
+//     height: 80%;
+//     position: relative;
+
+//   }
+
+// .block-explorer-chips{
+//   color: rgb(2, 77, 90);
+//   width: fit-content;
+//   justify-content: center;
+  
+// }
+
+.block-explorer-paginator{
+  box-shadow: 0px 5px 10px rgb(0, 0, 0);
+  color: white;
+  background-color: #1c1c1c; 
   
 }
